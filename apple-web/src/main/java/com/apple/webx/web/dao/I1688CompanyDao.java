@@ -18,5 +18,5 @@ public interface I1688CompanyDao {
 	 * @param page
 	 * @return <code>
 	 */
-	public DataResult<Craw1688Test> doQueryList(Page page);
+	public DataResult<Craw1688Test> doQueryList(Page page,Craw1688Test test);
 }

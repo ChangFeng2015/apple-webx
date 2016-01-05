@@ -21,6 +21,6 @@ public class Homepage {
 	private I1688CompanyDao i1688CompanyDao;
 	public DataResult<Craw1688Test> excute(@Params Page page){
 		PageUtil.checkPage(page);
-		return i1688CompanyDao.doQueryList(page);
+		return i1688CompanyDao.doQueryList(page,new Craw1688Test());
 	}
 }

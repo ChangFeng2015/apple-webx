@@ -18,7 +18,7 @@ public class Company1688DaoImpl implements I1688CompanyDao {
 	@Autowired
 	private Craw1688TestMapperExt craw1688TestMapperExt;
 	@Override
-	public DataResult<Craw1688Test> doQueryList(Page page) {
+	public DataResult<Craw1688Test> doQueryList(Page page,Craw1688Test test) {
 		PageUtil.checkPage(page);
 		Craw1688TestExample example = new Craw1688TestExample();
 		example.setPage(page);
