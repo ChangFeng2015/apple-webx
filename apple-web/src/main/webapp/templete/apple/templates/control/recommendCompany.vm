@@ -1,0 +1,8 @@
+<div class='qytj_main'>
+	#foreach($company in $!recomComs)
+	<div class='qytj_box'>
+		<a class='a_change' href="/company/$velocityUtil.doGBKEncoding($!{company.companyName})-$!{company.id}.html">$!{company.companyName}</a><br>
+	    <span>主营产品：$!{company.businessScope}</span>
+	</div>
+	#end
+</div>

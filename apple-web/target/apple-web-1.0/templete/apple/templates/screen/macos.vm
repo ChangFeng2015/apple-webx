@@ -1,0 +1,97 @@
+########  VM page HELP 分页
+#macro(vmPageHelp)
+	 class="canClick" 
+#end
+
+#macro(vmPageSize $pageSize)
+	<input  type="hidden" id="vmPageSize" value="$pageSize"/>
+#end
+
+########  VM page 分页
+
+##$currPage 当前页
+##$pageCount 总页数
+##$totalCount 总条数
+##$pageSize 分页大小
+
+##$prePage  前一页
+##$nextPage  后一页
+#macro(vm1688Page $currPage, $totalCount, $pageSize)
+	
+	#set($pageCount = $totalCount / $pageSize)
+	
+	#set($yuCount = $totalCount % $pageSize)
+	
+	#if($yuCount>0)
+		#set($pageCount = $pageCount+1 )
+	#end
+	#if($pageCount > 0) ## 总页数大于0页
+		#if($totalCount > $pageSize) ## 总条数大于分页大小 否则不显示分页组件
+		<div style='width:100%; text-align:center; overflow:hidden;'>
+        	<div class="pagination pull-cent pagination_seller">
+        		#set($prePage = $currPage - 1)  ## 设置前一页数据
+        		#set($nextPage = $currPage + 1) ## 设置后一页数据 
+				
+				#if(($currPage - 5) > 0)
+					#set($beginPageNum=$currPage - 5)
+				#else
+					#set($beginPageNum=1)
+				#end
+				
+				#if(($currPage + 5)>$pageCount)
+					#set($endPageNum=$pageCount)
+				#elseif(($currPage + 5) <= 10)
+					#if($pageCount>10)
+						#set($endPageNum=10)
+					#else
+						#set($endPageNum=$pageCount)
+					#end
+				#else
+					#set($endPageNum=$currPage + 5)
+				#end
+				
+            	<ul>
+                	<li class="page_fpage"><a  name="1" 
+						#if($currPage > 1) 
+								#vmPageHelp  href="http://www.antchain.com/qiyehuangye/company-1.html"
+						#else 
+						#end></a></li>
+						
+        			<li class="page_prev_seller"><a name=$prePage 
+						#if(1!=$currPage)  
+							#vmPageHelp  href="http://www.antchain.com/qiyehuangye/company-${prePage}.html"
+						#else class="prevPage" 
+							
+						#end ></a></li>
+						
+            			#foreach($i in [$beginPageNum..$endPageNum])
+            			  <li> <a 
+							#if("$i" != "$currPage") name="$i" 
+								#vmPageHelp   href="http://www.antchain.com/qiyehuangye/company-${i}.html"
+							#else  class="active"  
+							#end >$i</a></li>
+						#end
+						
+        			<li class="page_next_seller"><a name=$nextPage 
+						#if($!pageCount!=$currPage) 
+							#vmPageHelp   href="http://www.antchain.com/qiyehuangye/company-${nextPage}.html"
+						#else class="nextPage"  
+							
+						#end ></a></li>
+						
+        			<li class="page_lpage"><a  style="font-size:25px; line-height:32px;" name=$pageCount 
+						#if($!pageCount!=$currPage) 
+								#vmPageHelp  href="http://www.antchain.com/qiyehuangye/company-${pageCount}.html"
+						#else
+						#end ></a></li>
+                </ul>
+            </div>
+            </div>
+		#end
+	#else 
+		
+	#end
+#end
+
+
+

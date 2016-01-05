@@ -1,0 +1,13 @@
+
+<!DOCTYPE>
+<html>
+	$control.setTemplate("head")
+	
+<body>
+	$control.setTemplate("topNav")
+     
+    $screen_placeholder
+     
+    $control.setTemplate("bottom")
+</body>
+</html>

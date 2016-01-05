@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+	<!-- <classPathEntry location="/Users/Jndong/M2/mysql/mysql-connector-java/5.1.26/mysql-connector-java-5.1.26.jar" 
+		/> -->
+
+	<classPathEntry
+		location="D:/programing/M2/mysql/mysql-connector-java/5.1.26/mysql-connector-java-5.1.26.jar" />
+
+
+	<!-- 配置一个代码生成操作，如果生成的目录或是数据库不一样，只需要参考增加一个context节点即可 -->
+	<context id="rock_sample_app_sys" targetRuntime="MyBatis3">
+
+		<property name="suppressAllComments" value="true" />
+		<property name="useActualColumnNames" value="false" />
+
+		<!-- 配置插件 -->
+		<plugin
+			type="com.apple.webx.common.mybatis.plugin.MysqlPaginationPluginExt" />
+
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://192.168.0.250:3306/crawl1688?useUnicode=true&amp;characterEncoding=UTF-8"
+			userId="root" password="root" />
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<javaModelGenerator targetPackage="com.apple.webx.domain"
+			targetProject="src/main/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="com/apple/webx/persistence"
+			targetProject="src/main/resources">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="com.apple.webx.persistence" targetProject="src/main/java">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+		
+		<!-- 商品表 -->
+
+		<table tableName="CRAW1688_TEST"/>
+
+	</context>
+</generatorConfiguration>

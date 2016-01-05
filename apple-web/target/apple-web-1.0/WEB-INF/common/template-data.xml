@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans:beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:util="http://www.springframework.org/schema/util"
+             xmlns:p="http://www.springframework.org/schema/p"
+             xsi:schemaLocation="
+                http://www.springframework.org/schema/beans http://localhost:8080/schema/www.springframework.org/schema/beans/spring-beans.xsd
+                http://www.springframework.org/schema/util http://localhost:8080/schema/www.springframework.org/schema/util/spring-util.xsd
+             ">
+    
+    <util:map id="selectCountries" map-class="java.util.LinkedHashMap">
+    	<beans:entry value="AF" key="Afghanistan"/>
+		<beans:entry value="AX" key="Åland Islands"/>
+		<beans:entry value="AL" key="Albania"/>
+		<beans:entry value="DZ" key="Algeria"/>
+		<beans:entry value="AS" key="American Samoa"/>
+		<beans:entry value="AD" key="Andorra"/>
+		<beans:entry value="AO" key="Angola"/>
+		<beans:entry value="AI" key="Anguilla"/>
+		<beans:entry value="AQ" key="Antarctica"/>
+		<beans:entry value="AG" key="Antigua and Barbuda"/>
+		<beans:entry value="AR" key="Argentina"/>
+		<beans:entry value="AM" key="Armenia"/>
+		<beans:entry value="AW" key="Aruba"/>
+		<beans:entry value="AU" key="Australia"/>
+		<beans:entry value="AT" key="Austria"/>
+		<beans:entry value="AZ" key="Azerbaijan"/>
+		<beans:entry value="BS" key="Bahamas"/>
+		<beans:entry value="BH" key="Bahrain"/>
+		<beans:entry value="BD" key="Bangladesh"/>
+		<beans:entry value="BB" key="Barbados"/>
+		<beans:entry value="BY" key="Belarus"/>
+		<beans:entry value="BE" key="Belgium"/>
+		<beans:entry value="BZ" key="Belize"/>
+		<beans:entry value="BJ" key="Benin"/>
+		<beans:entry value="BM" key="Bermuda"/>
+		<beans:entry value="BT" key="Bhutan"/>
+		<beans:entry value="BO" key="Bolivia"/>
+		<beans:entry value="BA" key="Bosnia and Herzegovina"/>
+		<beans:entry value="BW" key="Botswana"/>
+		<beans:entry value="BV" key="Bouvet Island"/>
+		<beans:entry value="BR" key="Brazil"/>
+		<beans:entry value="IO" key="British Indian Ocean Territory"/>
+		<beans:entry value="BN" key="Brunei Darussalam"/>
+		<beans:entry value="BG" key="Bulgaria"/>
+		<beans:entry value="BF" key="Burkina Faso"/>
+		<beans:entry value="BI" key="Burundi"/>
+		<beans:entry value="KH" key="Cambodia"/>
+		<beans:entry value="CM" key="Cameroon"/>
+		<beans:entry value="CA" key="Canada"/>
+		<beans:entry value="CV" key="Cape Verde"/>
+		<beans:entry value="KY" key="Cayman Islands"/>
+		<beans:entry value="CF" key="Central African Republic"/>
+		<beans:entry value="TD" key="Chad"/>
+		<beans:entry value="CL" key="Chile"/>
+		<beans:entry value="CN" key="China"/>
+		<beans:entry value="CX" key="Christmas Island"/>
+		<beans:entry value="CC" key="Cocos (Keeling) Islands"/>
+		<beans:entry value="CO" key="Colombia"/>
+		<beans:entry value="KM" key="Comoros"/>
+		<beans:entry value="CG" key="Congo"/>
+		<beans:entry value="CD" key="Congo, The Democratic Republic of The"/>
+		<beans:entry value="CK" key="Cook Islands"/>
+		<beans:entry value="CR" key="Costa Rica"/>
+		<beans:entry value="CI" key="Cote D'ivoire"/>
+		<beans:entry value="HR" key="Croatia"/>
+		<beans:entry value="CU" key="Cuba"/>
+		<beans:entry value="CY" key="Cyprus"/>
+		<beans:entry value="CZ" key="Czech Republic"/>
+		<beans:entry value="DK" key="Denmark"/>
+		<beans:entry value="DJ" key="Djibouti"/>
+		<beans:entry value="DM" key="Dominica"/>
+		<beans:entry value="DO" key="Dominican Republic"/>
+		<beans:entry value="EC" key="Ecuador"/>
+		<beans:entry value="EG" key="Egypt"/>
+		<beans:entry value="SV" key="El Salvador"/>
+		<beans:entry value="GQ" key="Equatorial Guinea"/>
+		<beans:entry value="ER" key="Eritrea"/>
+		<beans:entry value="EE" key="Estonia"/>
+		<beans:entry value="ET" key="Ethiopia"/>
+		<beans:entry value="FK" key="Falkland Islands (Malvinas)"/>
+		<beans:entry value="FO" key="Faroe Islands"/>
+		<beans:entry value="FJ" key="Fiji"/>
+		<beans:entry value="FI" key="Finland"/>
+		<beans:entry value="FR" key="France"/>
+		<beans:entry value="GF" key="French Guiana"/>
+		<beans:entry value="PF" key="French Polynesia"/>
+		<beans:entry value="TF" key="French Southern Territories"/>
+		<beans:entry value="GA" key="Gabon"/>
+		<beans:entry value="GM" key="Gambia"/>
+		<beans:entry value="GE" key="Georgia"/>
+		<beans:entry value="DE" key="Germany"/>
+		<beans:entry value="GH" key="Ghana"/>
+		<beans:entry value="GI" key="Gibraltar"/>
+		<beans:entry value="GR" key="Greece"/>
+		<!---
+		<beans:entry value="GL" key>Greenland</option>
+		<beans:entry value="GD" key>Grenada</option>
+		<beans:entry value="GP" key>Guadeloupe</option>
+		<beans:entry value="GU" key>Guam</option>
+		<beans:entry value="GT" key>Guatemala</option>
+		<beans:entry value="GG" key>Guernsey</option>
+		<beans:entry value="GN" key>Guinea</option>
+		<beans:entry value="GW" key>Guinea-bissau</option>
+		<beans:entry value="GY" key>Guyana</option>
+		<beans:entry value="HT" key>Haiti</option>
+		<beans:entry value="HM" key>Heard Island and Mcdonald Islands</option>
+		<beans:entry value="VA" key>Holy See (Vatican City State)</option>
+		<beans:entry value="HN" key>Honduras</option>
+		<beans:entry value="HK" key>Hong Kong</option>
+		<beans:entry value="HU" key>Hungary</option>
+		<beans:entry value="IS" key>Iceland</option>
+		<beans:entry value="IN" key>India</option>
+		<beans:entry value="ID" key>Indonesia</option>
+		<beans:entry value="IR" key>Iran, Islamic Republic of</option>
+		<beans:entry value="IQ" key>Iraq</option>
+		<beans:entry value="IE" key>Ireland</option>
+		<beans:entry value="IM" key>Isle of Man</option>
+		<beans:entry value="IL" key>Israel</option>
+		<beans:entry value="IT" key>Italy</option>
+		<beans:entry value="JM" key>Jamaica</option>
+		<beans:entry value="JP" key>Japan</option>
+		<beans:entry value="JE" key>Jersey</option>
+		<beans:entry value="JO" key>Jordan</option>
+		<beans:entry value="KZ" key>Kazakhstan</option>
+		<beans:entry value="KE" key>Kenya</option>
+		<beans:entry value="KI" key>Kiribati</option>
+		<beans:entry value="KP" key>Korea, Democratic People's Republic of</option>
+		<beans:entry value="KR" key>Korea, Republic of</option>
+		<beans:entry value="KW" key>Kuwait</option>
+		<beans:entry value="KG" key>Kyrgyzstan</option>
+		<beans:entry value="LA" key>Lao People's Democratic Republic</option>
+		<beans:entry value="LV" key>Latvia</option>
+		<beans:entry value="LB" key>Lebanon</option>
+		<beans:entry value="LS" key>Lesotho</option>
+		<beans:entry value="LR" key>Liberia</option>
+		<beans:entry value="LY" key>Libyan Arab Jamahiriya</option>
+		<beans:entry value="LI" key>Liechtenstein</option>
+		<beans:entry value="LT" key>Lithuania</option>
+		<beans:entry value="LU" key>Luxembourg</option>
+		<beans:entry value="MO" key>Macao</option>
+		<beans:entry value="MK" key>Macedonia, The Former Yugoslav Republic of</option>
+		<beans:entry value="MG" key>Madagascar</option>
+		<beans:entry value="MW" key>Malawi</option>
+		<beans:entry value="MY" key>Malaysia</option>
+		<beans:entry value="MV" key>Maldives</option>
+		<beans:entry value="ML" key>Mali</option>
+		<beans:entry value="MT" key>Malta</option>
+		<beans:entry value="MH" key>Marshall Islands</option>
+		<beans:entry value="MQ" key>Martinique</option>
+		<beans:entry value="MR" key>Mauritania</option>
+		<beans:entry value="MU" key>Mauritius</option>
+		<beans:entry value="YT" key>Mayotte</option>
+		<beans:entry value="MX" key>Mexico</option>
+		<beans:entry value="FM" key>Micronesia, Federated States of</option>
+		<beans:entry value="MD" key>Moldova, Republic of</option>
+		<beans:entry value="MC" key>Monaco</option>
+		<beans:entry value="MN" key>Mongolia</option>
+		<beans:entry value="ME" key>Montenegro</option>
+		<beans:entry value="MS" key>Montserrat</option>
+		<beans:entry value="MA" key>Morocco</option>
+		<beans:entry value="MZ" key>Mozambique</option>
+		<beans:entry value="MM" key>Myanmar</option>
+		<beans:entry value="NA" key>Namibia</option>
+		<beans:entry value="NR" key>Nauru</option>
+		<beans:entry value="NP" key>Nepal</option>
+		<beans:entry value="NL" key>Netherlands</option>
+		<beans:entry value="AN" key>Netherlands Antilles</option>
+		<beans:entry value="NC" key>New Caledonia</option>
+		<beans:entry value="NZ" key>New Zealand</option>
+		<beans:entry value="NI" key>Nicaragua</option>
+		<beans:entry value="NE" key>Niger</option>
+		<beans:entry value="NG" key>Nigeria</option>
+		<beans:entry value="NU" key>Niue</option>
+		<beans:entry value="NF" key>Norfolk Island</option>
+		<beans:entry value="MP" key>Northern Mariana Islands</option>
+		<beans:entry value="NO" key>Norway</option>
+		<beans:entry value="OM" key>Oman</option>
+		<beans:entry value="PK" key>Pakistan</option>
+		<beans:entry value="PW" key>Palau</option>
+		<beans:entry value="PS" key>Palestinian Territory, Occupied</option>
+		<beans:entry value="PA" key>Panama</option>
+		<beans:entry value="PG" key>Papua New Guinea</option>
+		<beans:entry value="PY" key>Paraguay</option>
+		<beans:entry value="PE" key>Peru</option>
+		<beans:entry value="PH" key>Philippines</option>
+		<beans:entry value="PN" key>Pitcairn</option>
+		<beans:entry value="PL" key>Poland</option>
+		<beans:entry value="PT" key>Portugal</option>
+		<beans:entry value="PR" key>Puerto Rico</option>
+		<beans:entry value="QA" key>Qatar</option>
+		<beans:entry value="RE" key>Reunion</option>
+		<beans:entry value="RO" key>Romania</option>
+		<beans:entry value="RU" key>Russian Federation</option>
+		<beans:entry value="RW" key>Rwanda</option>
+		<beans:entry value="SH" key>Saint Helena</option>
+		<beans:entry value="KN" key>Saint Kitts and Nevis</option>
+		<beans:entry value="LC" key>Saint Lucia</option>
+		<beans:entry value="PM" key>Saint Pierre and Miquelon</option>
+		<beans:entry value="VC" key>Saint Vincent and The Grenadines</option>
+		<beans:entry value="WS" key>Samoa</option>
+		<beans:entry value="SM" key>San Marino</option>
+		<beans:entry value="ST" key>Sao Tome and Principe</option>
+		<beans:entry value="SA" key>Saudi Arabia</option>
+		<beans:entry value="SN" key>Senegal</option>
+		<beans:entry value="RS" key>Serbia</option>
+		<beans:entry value="SC" key>Seychelles</option>
+		<beans:entry value="SL" key>Sierra Leone</option>
+		<beans:entry value="SG" key>Singapore</option>
+		<beans:entry value="SK" key>Slovakia</option>
+		<beans:entry value="SI" key>Slovenia</option>
+		<beans:entry value="SB" key>Solomon Islands</option>
+		<beans:entry value="SO" key>Somalia</option>
+		<beans:entry value="ZA" key>South Africa</option>
+		<beans:entry value="GS" key>South Georgia and The South Sandwich Islands</option>
+		<beans:entry value="ES" key>Spain</option>
+		<beans:entry value="LK" key>Sri Lanka</option>
+		<beans:entry value="SD" key>Sudan</option>
+		<beans:entry value="SR" key>Suriname</option>
+		<beans:entry value="SJ" key>Svalbard and Jan Mayen</option>
+		<beans:entry value="SZ" key>Swaziland</option>
+		<beans:entry value="SE" key>Sweden</option>
+		<beans:entry value="CH" key>Switzerland</option>
+		<beans:entry value="SY" key>Syrian Arab Republic</option>
+		<beans:entry value="TW" key>Taiwan, Province of China</option>
+		<beans:entry value="TJ" key>Tajikistan</option>
+		<beans:entry value="TZ" key>Tanzania, United Republic of</option>
+		<beans:entry value="TH" key>Thailand</option>
+		<beans:entry value="TL" key>Timor-leste</option>
+		<beans:entry value="TG" key>Togo</option>
+		<beans:entry value="TK" key>Tokelau</option>
+		<beans:entry value="TO" key>Tonga</option>
+		<beans:entry value="TT" key>Trinidad and Tobago</option>
+		<beans:entry value="TN" key>Tunisia</option>
+		<beans:entry value="TR" key>Turkey</option>
+		<beans:entry value="TM" key>Turkmenistan</option>
+		<beans:entry value="TC" key>Turks and Caicos Islands</option>
+		<beans:entry value="TV" key>Tuvalu</option>
+		<beans:entry value="UG" key>Uganda</option>
+		<beans:entry value="UA" key>Ukraine</option>
+		<beans:entry value="AE" key>United Arab Emirates</option>
+		<beans:entry value="GB" key>United Kingdom</option>
+		<beans:entry value="US" key>United States</option>
+		<beans:entry value="UM" key="United States Minor Outlying Islands"/>
+		<beans:entry value="UY" key="Uruguay"/>
+		<beans:entry value="UZ" key="Uzbekistan"/>
+		<beans:entry value="VU" key="Vanuatu"/>
+		<beans:entry value="VE" key="Venezuela"/>
+		<beans:entry value="VN" key="Viet Nam"/>
+		<beans:entry value="VG" key="Virgin Islands, British"/>
+		<beans:entry value="VI" key="Virgin Islands, U.S."/>
+		<beans:entry value="WF" key="Wallis and Futuna"/>
+		<beans:entry value="EH" key="Western Sahara"/>
+		<beans:entry value="YE" key="Yemen"/>
+		<beans:entry value="ZM" key="Zambia"/>
+		<beans:entry value="ZW" key="Zimbabwe"/>
+		-->
+    </util:map>
+
+    <util:map id="selectCreditCardType" map-class="java.util.LinkedHashMap">
+        <beans:entry key="MasterCard" value="MasterCard" />
+        <beans:entry key="Visa" value="Visa" />
+    </util:map>
+
+    <util:map id="selectMonth" map-class="java.util.LinkedHashMap">
+        <beans:entry key="1" value="1月" />
+        <beans:entry key="2" value="2月" />
+        <beans:entry key="3" value="3月" />
+        <beans:entry key="4" value="4月" />
+        <beans:entry key="5" value="5月" />
+        <beans:entry key="6" value="6月" />
+        <beans:entry key="7" value="7月" />
+        <beans:entry key="8" value="8月" />
+        <beans:entry key="9" value="9月" />
+        <beans:entry key="10" value="10月" />
+        <beans:entry key="11" value="11月" />
+        <beans:entry key="12" value="12月" />
+    </util:map>
+
+    <util:map id="selectYear" map-class="java.util.LinkedHashMap">
+        <beans:entry key="1975" value="1975" />
+        <beans:entry key="1976" value="1976" />
+        <beans:entry key="1977" value="1977" />
+        <beans:entry key="1978" value="1978" />
+        <beans:entry key="1979" value="1979" />
+        <beans:entry key="1980" value="1980" />
+        <beans:entry key="1981" value="1981" />
+        <beans:entry key="1982" value="1982" />
+        <beans:entry key="1983" value="1983" />
+        <beans:entry key="1984" value="1984" />
+        <beans:entry key="1985" value="1985" />
+        <beans:entry key="1986" value="1986" />
+        <beans:entry key="1987" value="1987" />
+        <beans:entry key="1988" value="1988" />
+        <beans:entry key="1989" value="1989" />
+        <beans:entry key="1990" value="1990" />
+        <beans:entry key="1991" value="1991" />
+        <beans:entry key="1992" value="1992" />
+        <beans:entry key="1993" value="1993" />
+        <beans:entry key="1994" value="1994" />
+        <beans:entry key="1995" value="1995" />
+        <beans:entry key="1996" value="1996" />
+        <beans:entry key="1997" value="1997" />
+        <beans:entry key="1998" value="1998" />
+        <beans:entry key="1999" value="1999" />
+        <beans:entry key="2000" value="2000" />
+        <beans:entry key="2001" value="2001" />
+        <beans:entry key="2002" value="2002" />
+        <beans:entry key="2003" value="2003" />
+        <beans:entry key="2004" value="2004" />
+        <beans:entry key="2005" value="2005" />
+        <beans:entry key="2006" value="2006" />
+        <beans:entry key="2007" value="2007" />
+        <beans:entry key="2008" value="2008" />
+        <beans:entry key="2009" value="2009" />
+        <beans:entry key="2010" value="2010" />
+        <beans:entry key="2011" value="2011" />
+        <beans:entry key="2012" value="2012" />
+        <beans:entry key="2013" value="2013" />
+        <beans:entry key="2014" value="2014" />
+        <beans:entry key="2015" value="2015" />
+        <beans:entry key="2016" value="2016" />
+        <beans:entry key="2017" value="2017" />
+        <beans:entry key="2018" value="2018" />
+        <beans:entry key="2019" value="2019" />
+        <beans:entry key="2020" value="2020" />
+        <beans:entry key="2021" value="2021" />
+        <beans:entry key="2022" value="2022" />
+        <beans:entry key="2023" value="2023" />
+        <beans:entry key="2024" value="2024" />
+        <beans:entry key="2025" value="2025" />
+        <beans:entry key="2026" value="2026" />
+        <beans:entry key="2027" value="2027" />
+        <beans:entry key="2028" value="2028" />
+        <beans:entry key="2029" value="2029" />
+        <beans:entry key="2030" value="2030" />
+        <beans:entry key="2031" value="2031" />
+        <beans:entry key="2032" value="2032" />
+        <beans:entry key="2033" value="2033" />
+        <beans:entry key="2034" value="2034" />
+        <beans:entry key="2035" value="2035" />
+        <beans:entry key="2036" value="2036" />
+        <beans:entry key="2037" value="2037" />
+        <beans:entry key="2038" value="2038" />
+        <beans:entry key="2039" value="2039" />
+        <beans:entry key="2040" value="2040" />
+        <beans:entry key="2041" value="2041" />
+        <beans:entry key="2042" value="2042" />
+        <beans:entry key="2043" value="2043" />
+        <beans:entry key="2044" value="2044" />
+        <beans:entry key="2045" value="2045" />
+        <beans:entry key="2046" value="2046" />
+        <beans:entry key="2047" value="2047" />
+        <beans:entry key="2048" value="2048" />
+        <beans:entry key="2049" value="2049" />
+        <beans:entry key="2050" value="2050" />
+        <beans:entry key="2051" value="2051" />
+        <beans:entry key="2052" value="2052" />
+        <beans:entry key="2053" value="2053" />
+    </util:map>
+
+</beans:beans>

@@ -1,0 +1,5 @@
+com\apple\webx\web\dao\impl\Company1688DaoImpl.class
+com\apple\webx\web\module\screen\Homepage.class
+com\apple\webx\web\dao\I1688CompanyDao.class
+com\apple\webx\web\module\rpc\I1688CompaniesRpc.class
+com\apple\webx\web\interceptor\CommonInterceptor.class

@@ -1,0 +1,30 @@
+<div class="top_nav">
+        <div class="top_main">
+            <b>城市分类黄页：</b>
+            <span>
+            	<a>北京</a>
+                <a>上海</a>
+                <a>广州</a>
+                <a>深圳</a>
+                <a>杭州</a>
+                <a>青岛</a>
+                <a>大连</a>
+                <a>沈阳</a>
+                <a>天津</a>
+                <a>哈尔滨</a>
+                <a>武汉</a>
+                <a>长沙</a>
+            </span>
+            <span class="top_right">
+                <a href="javascript:void(0)" onclick="shoucang(document.title,window.location)">收藏</a>|
+                <a href="javascript:void(0)" onclick="SetHome(this,window.location)">设为主页</a>|
+                <a target="_blank"  href="http://wpa.qq.com/msgrd?v=3&amp;uin=2351750367&amp;site=qq&amp;menu=yes">在线客服</a>
+                <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2351750367&amp;site=qq&amp;menu=yes">
+                    <img border="0" src="http://www.antchain.com/htdocs/images/com_qq.png" alt="在线咨询" title="在线咨询">
+                </a>
+                <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=3286892542&amp;site=qq&amp;menu=ye">
+                    <img border="0" src="http://www.antchain.com/htdocs/images/com_qq.png" alt="广告咨询" title="广告咨询">
+                </a>
+            </span>
+        </div>
+     </div>

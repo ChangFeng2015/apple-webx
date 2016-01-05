@@ -1,0 +1,56 @@
+<section class='box_content'>
+     	$control.setTemplate("searchBox")
+     	<!--banner-->
+        <div class='mbx'>
+        	<a class='a_change' href="#">首页</a> > <span>企业黄页</span> 
+        </div>
+        <span class='xgtj'>
+            <b>相关推荐产品：</b>
+            <span>户外运动服</span>
+            <span>登山服</span>
+            <span>登山杖</span>
+        </span>
+        <!--公司列表-->
+        <section class='list_main'>
+        	<div class='list_right'>
+            	<!--公司list-->
+            	$control.setTemplate("companysList")
+                <!--一个公司结束-->
+                <div class='page'>
+	                #parse("macros.vm")
+	                #vm1688Page($!dataResult.currPage, $!dataResult.totalCount, $!dataResult.pageSize)
+                </div>
+            </div>
+            <!--热门推荐-->
+            <div class='list_left'>
+            	<div class='qytj_list'>
+                	<span class='qytj_title'>
+                    	企业推荐
+                    </span>
+					$control.setTemplate("recommendCompany.vm")
+                </div>
+            </div>
+            <div class='list_left' style='margin-top:10px;'>
+            	<div class='qytj_list wnty_list'>
+                	<span class='qytj_title'>
+                    	为您推荐
+                    </span>
+                    <a href="http://www.packtwo.com.cn" class='detail_tj_sbox list_tj_box'>
+                        <table><tr><td>
+                            <img src='http://www.antchain.com/htdocs/images/img_01.png'>
+                        </td></tr></table>
+                    </a>
+                    <a href="http://www.packtwo.com.cn" class='detail_tj_sbox list_tj_box'>
+                        <table><tr><td>
+                            <img src='http://www.antchain.com/htdocs/images/img_02.png'>
+                        </td></tr></table>
+                    </a>
+                    <a href="http://www.packtwo.com.cn" class='detail_tj_sbox list_tj_box'>
+                        <table><tr><td>
+                            <img src='http://www.antchain.com/htdocs/images/img_03.png'>
+                        </td></tr></table>
+                    </a>
+                </div>
+            </div>
+        </section>
+     </section>

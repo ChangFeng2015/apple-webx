@@ -1,0 +1,17 @@
+com\apple\webx\common\mybatis\MyBatisRepositorySupport.class
+com\apple\webx\common\mybatis\plugin\MysqlPaginationPlugin.class
+com\apple\webx\common\mybatis\plugin\OraclePaginationPluginExt.class
+com\apple\webx\common\mybatis\plugin\MysqlPaginationPluginExt.class
+com\apple\webx\domain\Craw1688TestExample$GeneratedCriteria.class
+com\apple\webx\common\page\DataResult.class
+com\apple\webx\common\mybatis\plugin\OraclePaginationPlugin.class
+com\apple\webx\domain\Craw1688Test.class
+com\apple\webx\domain\Craw1688TestExample$Criteria.class
+com\apple\webx\domain\Craw1688TestKey.class
+com\apple\webx\domain\Craw1688TestExample.class
+com\apple\webx\common\page\PageUtil.class
+com\apple\webx\common\page\TemplatePage.class
+com\apple\webx\domain\Craw1688TestExample$Criterion.class
+com\apple\webx\common\page\Page.class
+com\apple\webx\persistence\Craw1688TestMapperExt.class
+com\apple\webx\persistence\Craw1688TestMapper.class
