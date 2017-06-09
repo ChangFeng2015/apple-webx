@@ -29,7 +29,7 @@
             </global-macros>
             <plugins>
                 <vm-plugins:escape-support defaultEscape="html">
-                    <noescape>
+                <noescape>
                         <if-matches pattern="^control\." />
                         <if-matches pattern="^screen_placeholder" />
                         <if-matches pattern="^stringEscapeUtil\.escape" />

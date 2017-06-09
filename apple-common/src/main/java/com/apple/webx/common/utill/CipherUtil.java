@@ -123,7 +123,7 @@ public class CipherUtil {
 	/**
 	 * 获得对象属性
 	 * 
-	 * @param class1
+	 * @param clazz
 	 * @return
 	 */
 	private static List<Field> getAllObjectFields(Class<?> clazz) {
@@ -144,7 +144,7 @@ public class CipherUtil {
 	/**
 	 * 校验该类型能否加密或者解密,只支持普通对象和String，请在action层使用加解密功能
 	 * 
-	 * @param requiredType
+	 * @param clazz
 	 */
 
 	private static boolean isPrimitiveClass(Class<?> clazz) {
@@ -200,7 +200,7 @@ public class CipherUtil {
 	/**
 	 * 将字符串解密为需要的类型，只能是基本类型或者String，请在action层使用加解密功能
 	 * 
-	 * @param obj
+	 * @param str
 	 *            要解密的字符串
 	 * @param requiredType
 	 *            需要的类型，只能是基本类型或者String
