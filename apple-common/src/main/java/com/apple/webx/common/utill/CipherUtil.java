@@ -1,10 +1,8 @@
 package com.apple.webx.common.utill;
 
-import java.lang.reflect.Field;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-
+import com.alibaba.citrus.util.StringUtil;
+import com.apple.webx.web.common.cipher.AESCipher;
+import com.apple.webx.web.common.cipher.Cipher;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanWrapper;
@@ -13,9 +11,10 @@ import org.springframework.beans.BeansException;
 import org.springframework.util.CollectionUtils;
 import org.springframework.validation.DataBinder;
 
-import com.alibaba.citrus.util.StringUtil;
-import com.apple.webx.web.common.cipher.AESCipher;
-import com.apple.webx.web.common.cipher.Cipher;
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 /***
  * 类CipherUtil.java的实现描述：TODO 提供加解密功能
@@ -77,8 +76,9 @@ public class CipherUtil {
 			for (Object o : (Collection<?>) obj) {
 				doEncodeObj(o);
 			}
-		} else
+		} else {
 			doEncodeObj(obj);
+		}
 	}
 
 	/**
@@ -97,8 +97,9 @@ public class CipherUtil {
 			String cipherFieldName = getCipherFieldName(field);
 			Object valueBeforeEncode = bean.getPropertyValue(fieldName);
 			// 当该属性为空时，不进行加密
-			if (valueBeforeEncode == null)
+			if (valueBeforeEncode == null) {
 				continue;
+			}
 			bean.setPropertyValue(fieldName, null);
 			bean.setPropertyValue(cipherFieldName, encode(valueBeforeEncode));
 		}
@@ -286,12 +287,14 @@ public class CipherUtil {
 	 */
 	private static String getCipherFieldName(Field field) {
 		Cipher cipher = field.getAnnotation(Cipher.class);
-		if (cipher == null)
+		if (cipher == null) {
 			throw new IllegalArgumentException(field + " must hava annotation : Cipher");
-		if (!StringUtil.isBlank(cipher.value()))
+		}
+		if (!StringUtil.isBlank(cipher.value())) {
 			return cipher.value().trim();
-		else
+		} else {
 			return field.getName() + DEFAULT_CIPHER_FIELD_SUFFIX;
+		}
 	}
 
 	/**
@@ -309,8 +312,9 @@ public class CipherUtil {
 		// 增加当前类的属性
 		for (Field field : clazz.getDeclaredFields()) {
 			Cipher cipher = field.getAnnotation(Cipher.class);
-			if (cipher != null)
+			if (cipher != null) {
 				result.add(field);
+			}
 		}
 		return result;
 	}

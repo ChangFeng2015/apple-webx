@@ -5,7 +5,7 @@ import java.util.Random;
 
 /**
  * 购物车 主键生成器
- * */
+ */
 public class CartUtil {
 
 	/**
