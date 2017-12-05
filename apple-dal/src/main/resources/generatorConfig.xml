@@ -9,7 +9,7 @@
 		/> -->
 
 	<classPathEntry
-		location="D:/programing/M2/mysql/mysql-connector-java/5.1.26/mysql-connector-java-5.1.26.jar" />
+		location="E:/programingTools/reposity/publicReposity/M2/mysql/mysql-connector-java/5.1.26/mysql-connector-java-5.1.26.jar" />
 
 
 	<!-- 配置一个代码生成操作，如果生成的目录或是数据库不一样，只需要参考增加一个context节点即可 -->
@@ -23,8 +23,8 @@
 			type="com.apple.webx.common.mybatis.plugin.MysqlPaginationPluginExt" />
 
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-			connectionURL="jdbc:mysql://192.168.0.250:3306/crawl1688?useUnicode=true&amp;characterEncoding=UTF-8"
-			userId="root" password="root" />
+			connectionURL="jdbc:mysql://47.92.0.43:3306/weather?useUnicode=true&amp;characterEncoding=UTF-8"
+			userId="admin" password="root" />
 
 		<javaTypeResolver>
 			<property name="forceBigDecimals" value="false" />
@@ -48,7 +48,7 @@
 		
 		<!-- 商品表 -->
 
-		<table tableName="CRAW1688_TEST"/>
+		<table tableName="pub_message"/>
 
 	</context>
 </generatorConfiguration>

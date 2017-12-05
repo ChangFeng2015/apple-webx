@@ -7,32 +7,16 @@
  */
 package com.apple.webx.common.mybatis.plugin;
 
+import org.mybatis.generator.api.*;
+import org.mybatis.generator.api.dom.java.*;
+import org.mybatis.generator.api.dom.xml.*;
+import org.mybatis.generator.codegen.XmlConstants;
+import org.mybatis.generator.config.PropertyRegistry;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
-
-import org.mybatis.generator.api.CommentGenerator;
-import org.mybatis.generator.api.GeneratedJavaFile;
-import org.mybatis.generator.api.GeneratedXmlFile;
-import org.mybatis.generator.api.IntrospectedTable;
-import org.mybatis.generator.api.PluginAdapter;
-import org.mybatis.generator.api.ShellRunner;
-import org.mybatis.generator.api.dom.java.CompilationUnit;
-import org.mybatis.generator.api.dom.java.Field;
-import org.mybatis.generator.api.dom.java.FullyQualifiedJavaType;
-import org.mybatis.generator.api.dom.java.Interface;
-import org.mybatis.generator.api.dom.java.JavaVisibility;
-import org.mybatis.generator.api.dom.java.Method;
-import org.mybatis.generator.api.dom.java.Parameter;
-import org.mybatis.generator.api.dom.java.TopLevelClass;
-import org.mybatis.generator.api.dom.xml.Attribute;
-import org.mybatis.generator.api.dom.xml.Document;
-import org.mybatis.generator.api.dom.xml.Element;
-import org.mybatis.generator.api.dom.xml.TextElement;
-import org.mybatis.generator.api.dom.xml.XmlElement;
-import org.mybatis.generator.codegen.XmlConstants;
-import org.mybatis.generator.config.PropertyRegistry;
 
 /**
  * 类MysqlPaginationPlugin.java的实现描述： Mysql Mybatis Xml生成工具
@@ -514,6 +498,7 @@ public class MysqlPaginationPlugin extends PluginAdapter {
         }
     }
 
+    @Override
     public boolean validate(List<String> warnings) {
         return true;
     }
