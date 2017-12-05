@@ -6,7 +6,6 @@ import com.alibaba.citrus.turbine.dataresolver.Params;
 import com.apple.webx.common.page.DataResult;
 import com.apple.webx.common.page.Page;
 import com.apple.webx.common.page.PageUtil;
-import com.apple.webx.domain.Craw1688Test;
 import com.apple.webx.web.dao.I1688CompanyDao;
 /**
 * @Title: Homepage.java

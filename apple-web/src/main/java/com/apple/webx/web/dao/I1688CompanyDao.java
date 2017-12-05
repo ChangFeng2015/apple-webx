@@ -2,7 +2,6 @@ package com.apple.webx.web.dao;
 
 import com.apple.webx.common.page.DataResult;
 import com.apple.webx.common.page.Page;
-import com.apple.webx.domain.Craw1688Test;
 
 /**
 * @Title: I1688CompanyDao.java
